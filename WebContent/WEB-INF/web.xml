@@ -19,4 +19,6 @@
   	<servlet-name>MyKaptcha</servlet-name>
   	<url-pattern>/randomCode.jpg</url-pattern>
   </servlet-mapping>
+  
+  
 </web-app>

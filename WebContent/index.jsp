@@ -5,8 +5,17 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
+<script>
+	function reLoadCode() {
+		document.getElementById("img").src = "<%=request.getContextPath()%>/randomCode.jpg?r=" + new Date().getTime();
+	}
+</script>
 </head>
 <body>
-	<img src='/randomCode.jpg'/>
+	<form action="check.jsp" id="vertify">
+		<img src='randomCode.jpg' id="img"/><a href=javascript:reLoadCode()>看不清</a><br/>
+		<input type="text" name="s"/>
+		<input type="submit" value="submit" />
+	</form>
 </body>
 </html>
