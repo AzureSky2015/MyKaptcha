@@ -9,9 +9,10 @@
 </head>
 <body>
 <%
-	String s = request.getParameter("s");
+	String s = request.getParameter("s"); 
+	s = new String(s.getBytes("ISO8859-1"),"UTF-8");
 	String d = (String)session.getAttribute(Constants.KAPTCHA_SESSION_KEY);
-	response.getWriter().print(s.equals(d) ? "验证成功" : "验证失败");
+	response.getWriter().print(s + " = " + d + "\n" +(s.equals(d) ? "验证成功" : "验证失败"));
 %>
 </body>
 </html>

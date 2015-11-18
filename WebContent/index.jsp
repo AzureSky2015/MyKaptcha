@@ -12,7 +12,7 @@
 </script>
 </head>
 <body>
-	<form action="check.jsp" id="vertify">
+	<form action="check.jsp" id="vertify" method="get">
 		<img src='randomCode.jpg' id="img"/><a href=javascript:reLoadCode()>看不清</a><br/>
 		<input type="text" name="s"/>
 		<input type="submit" value="submit" />
